@@ -223,9 +223,15 @@ export function fuzzySearch(
 }
 
 export function randomColor(): string {
-  const randomValue = Math.floor(Math.random() * 0xffffff)
-  const hexColor = randomValue.toString(16).padStart(6, '0')
-  return `#${hexColor}`
+  // 预定义一组和谐、美观的颜色
+  const colorPalette = [
+    '#4A6FA5', '#6B7F82', '#5085A5', '#8FC1A9', '#F78888',
+    '#F3D250', '#ECECEC', '#90CCF4', '#5DA2D5', '#53A2BE',
+    '#5E6572', '#F7D1CD', '#F7D1CD', '#D7E3FC', '#D4A5A5'
+  ];
+  
+  const randomIndex = Math.floor(Math.random() * colorPalette.length);
+  return colorPalette[randomIndex];
 }
 
 let randomTimer: any
