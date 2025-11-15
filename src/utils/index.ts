@@ -260,7 +260,7 @@ export function randomBgImg(): void {
     }, 1000)
   }
 
-  randomTimer = setInterval(transition, 10000)
+  randomTimer = setInterval(transition, 120000)
 }
 
 export function removeBgImg(): void {
